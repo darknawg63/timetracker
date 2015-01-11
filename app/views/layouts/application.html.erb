@@ -10,7 +10,13 @@
 <body>
 <div id="container">
 	<header>
-		nav goes here
+		<nav>
+			<ul>
+				<% nav_items.each do |nav_item| %>
+					<%= display_nav_item(nav_item[:displaytext], nav_item[:controllername], nav_item[:linkurl]) %>
+				<% end %>
+			</ul>
+		</nav>
 	</header>
 	<section id="main">
 		<article>
