@@ -21,6 +21,9 @@
 	</header>
 	<section id="main">
 		<article>
+			<% if flash[:notice] %>
+				<div class="flash notice"><%= flash[:notice] %></div>
+			<% end %>
 			<%= yield %>
 		</article>
 		<aside>
@@ -28,7 +31,7 @@
 		</aside>
 	</section>
 	<footer>
-		<p>Time Tracker is <em>Sample Company</em> App</p>
+		<p>Time Tracker is a <em>Sample Company</em> App</p>
 	</footer>
 </div>
 </body>
